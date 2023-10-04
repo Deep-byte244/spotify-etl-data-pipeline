@@ -1,8 +1,7 @@
 
-
 # Spotify ETL Data Pipeline
 
-The Spotify ETL (Extract, Transform, Load) data pipeline project showcases the world of data engineering, offering insights into data extraction, transformation, and loading processes. Whether you're an experienced data engineer or simply curious about ETL pipelines, this project highlights the possibilities of building robust data pipelines.
+The Spotify ETL (Extract, Transform, Load) data pipeline project is a testament to the power of data engineering—a journey filled with challenges, solutions, and insights. This pipeline extracts listening history data from Spotify, transforms it into a structured format, and loads it into a SQL Server database for analysis. Whether you're an experienced data engineer or someone curious about ETL pipelines, this project demonstrates the endless possibilities that lie in building robust data pipelines.
 
 ## Libraries
 
@@ -37,7 +36,9 @@ redirect_uri = 'http://localhost:5000/callback'
 ```
 
 Set the `redirect_uri` to match the Redirect URI you've configured in your Spotify Developer Dashboard.
+
 ![Screenshot 1](https://github.com/Deep-byte244/spotify-etl-data-pipeline/assets/78338569/7972080a-a0eb-458d-afa3-4a5ae3814a65)
+
 ## Database Configuration
 
 To configure the database, replace the credentials in the appropriate section of your code.
@@ -60,7 +61,7 @@ You can run the script manually by executing it as you would with any Python scr
 
 6. **Program/script**: Browse and select the Python executable. This is typically located in the `C:\Users\<YourUsername>\AppData\Local\Programs\Python\<PythonVersion>` folder. Choose the `python.exe` file.
 
-7. **Add arguments (optional)**: If your Python script requires any command-line arguments, you can enter them in this field. For example, if your script is `etl-pipeline.py`
+7. **Add arguments (optional)**: If your Python script requires any command-line arguments, you can enter them in this field. For example, if your script is `etl-pipeline.py`, enter `etl-pipeline.py`.
 
 8. **Start in (optional)**: If your script relies on a specific working directory, specify it here like `D:\Data science\Spotify-etl\`. Otherwise, you can leave it blank.
 
@@ -80,16 +81,39 @@ Please note that for this to work, your Python script should be designed to exec
 
 Here are some screenshots of the project:
 
-
-
 For database configuration:
 
 ![Screenshot 2](https://github.com/Deep-byte244/spotify-etl-data-pipeline/assets/78338569/5c192cc6-b940-4ddb-ac52-0717b09acde9)
 
+## Logs Maintenance
+
+It's essential to maintain logs to track the execution of your ETL pipeline. You can implement logging in your Python script using Python's `logging` module. Create log files to record important events, errors, or information related to your ETL process.
+
+Example log maintenance code snippet:
+
+```python
+import logging
+
+# Configure the logging module
+logging.basicConfig(filename='etl_log.txt', level=logging.INFO, format='%(asctime)s - %(levelname)s: %(message)s')
+
+# Log information
+logging.info('ETL pipeline started.')
+
+# Log errors
+try:
+    # Your ETL code here
+except Exception as e:
+    logging.error(f'An error occurred: {str(e)}')
+
+# Log completion
+logging.info('ETL pipeline completed.')
+```
 ## Contact
 
 - LinkedIn: [Deepkumar Patel](https://www.linkedin.com/in/deepkumar-patel05/)
 - Kaggle: [deeppatel9095](https://www.kaggle.com/deeppatel9095/)
+- medium: [@learnwithdeep](https://medium.com/@learnwithdeep/building-a-robust-spotify-etl-pipeline-a-data-engineering-journey-d5703eaecde8)
   
 
 Feel free to reach out if you have any questions or suggestions. Enjoy exploring the world of data engineering with this Spotify ETL data pipeline project!
