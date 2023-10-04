@@ -1,4 +1,4 @@
-Certainly, here's an extended README file that includes instructions for scheduling your Python script using the Windows Task Scheduler:
+
 
 # Spotify ETL Data Pipeline
 
